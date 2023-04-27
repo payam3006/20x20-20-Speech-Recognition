@@ -62,6 +62,7 @@ recognition.addEventListener("result", (e) => {
     if (e.results[0][0].transcript == answer) {
       finalPage.classList.remove("hidden");
       main.classList.add("hidden");
+      recognition.onend();
     } else if (e.results[0][0].transcript > answer) {
       guide.innerText = "GO LOWER";
     } else {
