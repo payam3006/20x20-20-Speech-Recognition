@@ -55,6 +55,8 @@ function reload() {
   location.reload();
 }
 
+let guessAnswer = 0;
+
 recognition.addEventListener("result", (e) => {
   if (e.results[0][0].transcript >= 1 && e.results[0][0].transcript <= 100) {
     document.getElementById("action").setAttribute("style", "");
@@ -62,7 +64,7 @@ recognition.addEventListener("result", (e) => {
     if (e.results[0][0].transcript == answer) {
       finalPage.classList.remove("hidden");
       main.classList.add("hidden");
-      recognition.end();
+      guessAnswer = e.results[0][0].transcript;
     } else if (e.results[0][0].transcript > answer) {
       guide.innerText = "GO LOWER";
     } else {
@@ -84,6 +86,7 @@ recognition.addEventListener("result", (e) => {
 });
 
 recognition.start();
+// recognition.end(); نداریم این فانکشن رو! گو نخور
 
 // q(recognition);
 
@@ -92,7 +95,9 @@ recognition.start();
 // };
 
 recognition.onend = () => {
-  recognition.start();
+  if (guessAnswer != answer) {
+    recognition.start();
+  }
 };
 
 // recognition.onresult = (event) => {
