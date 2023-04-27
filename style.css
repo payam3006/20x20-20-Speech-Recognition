@@ -1,0 +1,43 @@
+body {
+  background-image: url("./_28x_xi85macw6_2722310687.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  backdrop-filter: blur(10px) brightness(30%);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body,
+main,
+.img,
+#final {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.playAgain {
+  color: black;
+  background-color: whitesmoke;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.hidden {
+  position: absolute;
+  opacity: 0;
+}
+.img i {
+  font-size: 15rem;
+}
+h1 {
+  margin: 15px 0 0 0;
+}
+.saidNumber {
+  font-size: x-large;
+  padding: 5px;
+  border: 1px solid white;
+  margin-bottom: 15px;
+}

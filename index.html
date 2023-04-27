@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Recognition</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="img">
+            <i class="fa fa-microphone"></i>
+            <h1>Guess a Number Between 1 - 100</h1>
+            <p>Speak the number into your microphone</p>
+            <p>You said:</p>
+            <div id="saidNumber" class="saidNumber">40</div>
+            <div id="guide" class="guide">GO HIGHER/GO LOWER/Number must be between 1 and 100/This is NOT a valid
+                number!</div>
+        </div>
+    </main>
+
+    <div id="final" class="hidden">
+        <h2>Congrats! You have guessed the number!</h2>
+        <h2>It was 76</h2>
+        <div class="playAgain">Play Again</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
