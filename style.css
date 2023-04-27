@@ -17,7 +17,15 @@ main,
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
+.action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .playAgain {
   color: black;
   background-color: whitesmoke;
@@ -37,7 +45,7 @@ h1 {
 }
 .saidNumber {
   font-size: x-large;
-  padding: 5px;
+  padding: 5px 10px;
   border: 1px solid white;
   margin-bottom: 15px;
 }

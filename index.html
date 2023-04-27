@@ -18,16 +18,17 @@
         </div>
         <h1>Guess a Number Between 1 - 100</h1>
         <p>Speak the number into your microphone</p>
-        <p>You said:</p>
-        <div id="saidNumber" class="saidNumber">40</div>
-        <div id="guide" class="guide">GO HIGHER/GO LOWER/Number must be between 1 and 100/This is NOT a valid
-            number!</div>
+        <div id="action" class="action" style="display: none;">
+            <p>You said:</p>
+            <div id="saidNumber" class="saidNumber"></div>
+            <div id="guide" class="guide"></div>
+        </div>
     </main>
 
     <div id="final" class="hidden">
         <h2>Congrats! You have guessed the number!</h2>
-        <h2>It was 76</h2>
-        <div class="playAgain">Play Again</div>
+        <h2 id="answer">It was 76</h2>
+        <div class="playAgain" onclick="reload()">Play Again</div>
     </div>
     <script src="script.js"></script>
 </body>
